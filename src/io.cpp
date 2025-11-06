@@ -36,9 +36,36 @@ namespace io {
 		return R;
 	}
 
-	void outputa(const std::string caminho, const nlohmann::json& out) {
+	void outputa(const std::string& caminho, const nlohmann::json& out) {
 		std::ofstream O(caminho, std::ios::binary);
 		O << out.dump(2);
+
+	}
+
+	void limpa_branco(std::string& S) {
+		std::string R; R.reserve(S.size());
+		int n = (int)S.size();
+		char C[4] = {' ', ' ', '\t', '\n'};
+
+		auto branco = [](char c) {
+			return c == '\n' ? 3 : c == '\t' ? 2 : c == ' ' ? 1 : 0;
+		};
+		for (int l = 0, r; l < n; l = r) {
+			r = l + 1;
+			if (!branco(S[l])) {
+				R.push_back(S[l]);
+				continue;
+			}
+
+			int agr = 0, c;
+			while (r < n and (c = branco(S[r]))) {
+				r++;
+				agr = std::max(agr, c);
+			}
+			R.push_back(C[agr]);
+		}
+
+		S.swap(R);
 	}
 
 	std::string le_pdf(const std::string& caminho) {
@@ -63,6 +90,7 @@ namespace io {
 			delete pag;
 		}
 		
+		//limpa_branco(R);
 		return R;
 	}
 }

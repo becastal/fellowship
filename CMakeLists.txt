@@ -12,7 +12,7 @@ else()
   add_compile_options(-O3 -DNDEBUG)
 endif()
 
-include(FetchContent)  # <-- this was missing
+include(FetchContent)
 
 # simdjson
 FetchContent_Declare(simdjson
@@ -21,16 +21,15 @@ FetchContent_Declare(simdjson
 )
 FetchContent_MakeAvailable(simdjson)
 
-# nlohmann::json (header-only)
+# nlohmann
 FetchContent_Declare(nlohmann_json
   GIT_REPOSITORY https://github.com/nlohmann/json.git
   GIT_TAG v3.11.3
 )
 FetchContent_MakeAvailable(nlohmann_json)
 
-add_executable(enter src/main.cpp src/io.cpp)
+add_executable(enter src/main.cpp src/io.cpp src/api.cpp)
 
-# nlohmann
 target_link_libraries(enter PRIVATE simdjson::simdjson nlohmann_json::nlohmann_json)
 
 # poppler
@@ -40,3 +39,7 @@ pkg_check_modules(POPPLERCPP REQUIRED poppler-cpp)
 target_include_directories(enter PRIVATE ${POPPLERCPP_INCLUDE_DIRS})
 target_compile_options(enter PRIVATE ${POPPLERCPP_CFLAGS_OTHER})
 target_link_libraries(enter PRIVATE ${POPPLERCPP_LIBRARIES})
+
+# libcurl
+find_package(CURL REQUIRED)
+target_link_libraries(enter PRIVATE CURL::libcurl)
