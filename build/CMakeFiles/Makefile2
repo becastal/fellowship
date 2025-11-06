@@ -116,12 +116,12 @@ _deps/simdjson-build/clean: _deps/simdjson-build/CMakeFiles/simdjson.dir/clean
 CMakeFiles/enter.dir/all: _deps/simdjson-build/CMakeFiles/simdjson.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/enter.dir/build.make CMakeFiles/enter.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/enter.dir/build.make CMakeFiles/enter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/becastal/Documents/fellowship/build/CMakeFiles --progress-num=1,2,3 "Built target enter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/becastal/Documents/fellowship/build/CMakeFiles --progress-num=1,2,3,4 "Built target enter"
 .PHONY : CMakeFiles/enter.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/enter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/becastal/Documents/fellowship/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/becastal/Documents/fellowship/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/enter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/becastal/Documents/fellowship/build/CMakeFiles 0
 .PHONY : CMakeFiles/enter.dir/rule
@@ -142,7 +142,7 @@ CMakeFiles/enter.dir/clean:
 _deps/simdjson-build/CMakeFiles/simdjson.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/simdjson-build/CMakeFiles/simdjson.dir/build.make _deps/simdjson-build/CMakeFiles/simdjson.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/simdjson-build/CMakeFiles/simdjson.dir/build.make _deps/simdjson-build/CMakeFiles/simdjson.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/becastal/Documents/fellowship/build/CMakeFiles --progress-num=4,5 "Built target simdjson"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/becastal/Documents/fellowship/build/CMakeFiles --progress-num=5,6 "Built target simdjson"
 .PHONY : _deps/simdjson-build/CMakeFiles/simdjson.dir/all
 
 # Build rule for subdir invocation for target.

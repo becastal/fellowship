@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/enter.dir/src/api.cpp.o"
+  "CMakeFiles/enter.dir/src/api.cpp.o.d"
   "CMakeFiles/enter.dir/src/io.cpp.o"
   "CMakeFiles/enter.dir/src/io.cpp.o.d"
   "CMakeFiles/enter.dir/src/main.cpp.o"

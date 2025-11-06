@@ -47,6 +47,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.28/Modules/ExternalProject/shared_internal_commands.cmake"
   "/usr/share/cmake-3.28/Modules/FetchContent.cmake"
   "/usr/share/cmake-3.28/Modules/FetchContent/CMakeLists.cmake.in"
+  "/usr/share/cmake-3.28/Modules/FindCURL.cmake"
   "/usr/share/cmake-3.28/Modules/FindGit.cmake"
   "/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake"
@@ -60,6 +61,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake"
   "/usr/share/cmake-3.28/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake"
+  "/usr/share/cmake-3.28/Modules/SelectLibraryConfigurations.cmake"
   "/usr/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake"
   )
 
