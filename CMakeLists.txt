@@ -28,7 +28,7 @@ FetchContent_Declare(nlohmann_json
 )
 FetchContent_MakeAvailable(nlohmann_json)
 
-add_executable(enter src/main.cpp src/io.cpp src/api.cpp)
+add_executable(enter src/main.cpp src/io.cpp src/api.cpp src/opt.cpp)
 
 target_link_libraries(enter PRIVATE simdjson::simdjson nlohmann_json::nlohmann_json)
 
